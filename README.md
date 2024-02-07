@@ -1,5 +1,5 @@
-###PROJECT 1: The AWS Cloud-Based Blood Bank###
-Management System
+###PROJECT 1: The AWS Cloud-Based Blood Bank
+Management System###
 
 MISSION:
 This project's main objective is to develop a reliable and effective blood
