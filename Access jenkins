@@ -1,0 +1,15 @@
+Access Jenkins
+Open a web browser and navigate to:--------------------------
+http://your-ec2-public-ip:8080
+
+Retrieve the Initial Admin Password
+To set up Jenkins for the first time, we need to unlock it with an initial admin password:------------------------------------------------
+copy that particular path on jenkins window and paste on ec2 terminal:....................
+# sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Copy the password and paste it into the Jenkins setup page in your browser........
+
+
+Complete Jenkins Setup---------------------------
+Follow the on-screen instructions to complete the Jenkins setup.
+Install the suggested plugins or choose specific plugins as needed.
+Create first admin user and finish the configuration.
