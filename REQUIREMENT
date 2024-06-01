@@ -1,6 +1,6 @@
 CREATE AN EC2 INSTACE AND GIVE IT TO PERMISSION FOR "ALL TRAFFIC".
 RUN THESE ALL COMMMAND
-do ssh--------------------------------------------------------------------
+do ssh for machine access--------------------------------------------------------------------
 # sudo apt install 
 # sudo apt-get update
 # sudo apt install apache2
