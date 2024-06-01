@@ -1,116 +1,62 @@
-PROJECT 1: The AWS Cloud-Based Blood Bank
-Management System
+Project Report : CI/CD Pipeline on AWS
+Project Overview
+This project demonstrates the implementation of a Continuous Integration/Continuous Deployment (CI/CD) pipeline using Jenkins. The pipeline is triggered by a webhook and deployed on an Amazon EC2 machine. The setup ensures seamless integration, testing, and deployment of code changes.
 
-MISSION:
-This project's main objective is to develop a reliable and effective blood
-bank management system that makes use of AWS cloud services to
-improve accessibility, security, and data management.
-
-
-TECHNOLOGY USED :
-
-Data Storage and Management (Amazon S3): -
-Database Management (Amazon DynamoDB):-
-IAM
-AWS Lambda (Serverless Architecture):
-Amazon Cognito for Authentication and Authorization:-
-Notification Services (Amazon SNS): -
-Scalability and Elasticity (Auto Scaling): -
-
-Amazon cloudwatch
-Web Application (AWS Amplify)
-Security (AWS Key Management Service)
-
-1.Data Storage and Management (Amazon S3): -
-Store donor data, blood inventory data, and other pertinent documents in a
-safe, scalable manner by utilising Amazon S3.
-Adopt versioning and access controls to guarantee the security and
-integrity of your data.
-
-2.Database Management (Amazon DynamoDB):-
-For quick and adaptable data storage, use Amazon DynamoDB as a
-NoSQL database.
-Create a database model that handles blood types, donor information,
-inventory levels, and transaction history in an efficient manner.
-
-3.AWS Lambda (Serverless Architecture):
-Use AWS Lambda to implement serverless functions for particular
-activities, such as notifying donors and setting off alerts for low blood
-inventory.
-Use on-demand execution to save operating expenses and maximise
-resource utilisation.
-
-4.The Management of Identity and Access (IAM):
-Set up IAM roles and policies to provide safe system access.
-Assign the proper rights and distinguish between different user roles
-(donors, employees, and administrators).
-
-5.Amazon Cognito for Authentication and Authorization:-
-Use Amazon Cognito for user authorization and authentication, For
-improved security, use multi-factor authentication.
-
-6.Notification Services (Amazon SNS): -
-Connect Amazon SNS to notify donors in real time about events involving
-blood donations, critical blood shortages, and other pertinent updates.
-
-7. Amazon CloudWatch Monitoring and Logging-:
-
-Put CloudWatch to use to keep an eye on system performance and health
-and to create logs for audits.
-To alert administrators to any irregularities or problems, set up alarms.
+Objectives
+To automate the build, test, and deployment processes.
+To ensure rapid and reliable integration of code changes.
+To minimise manual intervention and reduce the chances of errors during deployment.
 
 
-8.  Web Application (AWS Amplify):-
-Create an intuitive web application to communicate with the blood bank
-management system by utilizing AWS Amplify.
-Assure responsive design to make it accessible on a range of gadgets.
+Components Used
+Jenkins: An open-source automation server used to build, test, and deploy software.
+Webhook: A method used to trigger the Jenkins pipeline automatically upon code changes.
+Amazon EC2: A scalable virtual server in the cloud where the application is deployed.
+Version Control System (e.g., GitHub): To manage source code and track changes.
 
-9. Security (AWS Key Management Service): - 
-Encrypt sensitive data while it's in transit and at rest by using AWS Key Management Service
 
-CONCLUSION:
+Project Setup
+Setting Up Jenkins on EC2
+Launched an Amazon EC2 instance with appropriate security groups and configurations.
+Installed Jenkins on the EC2 instance.
+Configured Jenkins to run as a service for continuous availability.
+Configuring Jenkins
+Installed necessary plugins such as Git, Pipeline, and SSH Agent.
+Set up credentials for accessing the Git repository and the EC2 instance.
+Creating a Jenkins Pipeline
+Defined a Jenkins Pipeline using a Jenkinsfile which includes stages for:
+Checkout: Cloning the repository from Git.
+Build: Compiling the code.
+Test: Running automated tests.
+Deploy: Deploying the application to the EC2 instance.
+Setting Up Webhook
+Configured a webhook in the version control system (e.g., GitHub) to notify Jenkins of any code changes.
+The webhook triggers the Jenkins pipeline automatically upon every push to the repository.
+Deployment on EC2
+Utilized SSH and SCP within the Jenkins pipeline to deploy the built application to the EC2 instance.
+Verified the deployment by checking the application’s status on the EC2 instance.
 
-This blood bank management system offers a scalable, safe, and user-friendly solution for effective blood inventory management, donor engagement, and overall operational excellence by utilising AWS cloud services. By utilising these  technologies, the system is made to
-be enough to adjust to the changing demands of blood bank operations, which eventually improves healthcare services.
+
+Pipeline Workflow
+Code Commit: Developers commit changes to the Git repository.
+Webhook Trigger: The webhook triggers the Jenkins pipeline.
+Pipeline Execution:
+Checkout: The pipeline checks out the latest code from the repository.
+Build: The code is built.
+Test: Automated tests are executed to ensure code quality.
+Deploy: The successful build is deployed to the EC2 instance.
+Notification: Notifications are sent to the team upon successful deployment or in case of any failure.
+
+
+Benefits
+Automation: Reduces manual intervention, speeding up the release process.
+Consistency: Ensures that every deployment follows the same process.
+Scalability: Easily scalable to accommodate more complex workflows and additional environments.
+Feedback: Provides immediate feedback to developers through automated testing and notifications.
 
 
 
 
-
-
-
-
-
-
-Project - 2 
-BULK - MESSAGING USIN AWS
-Create a bulk email messaging system using Amazon SES that allows users to send emails to a large number of recipients efficiently. Users should be able to compose emails, upload recipient lists, and track the delivery status of their emails through a user-friendly interface.
-
-
-Amazon SES (Simple Email Service):
-Amazon SES is the core service We’ll use for sending bulk emails. SES provides a reliable and scalable infrastructure for sending transactional and marketing emails.
-Amazon S3 (Simple Storage Service):
-Amazon S3 can be used to store email attachments, templates, and other resources required for your email campaigns.
-Amazon EC2 (Elastic Compute Cloud):
-We can use Amazon EC2 instances to host your application server that manages the bulk email sending process, integrates with SES, and handles user interactions.
-
-AWS Lambda:
-AWS Lambda can be used for executing code in response to events, such as triggering email sends based on certain conditions or handling incoming email events from SES.
-Amazon RDS (Relational Database Service):
-If your application requires storing user data, email templates, recipient lists, or tracking information, you can use Amazon RDS to set up a managed relational database.
-AWS IAM (Identity and Access Management):
-AWS IAM is crucial for managing access permissions and security credentials. You'll use IAM to control who can access your AWS resources and what actions they can perform.
-Amazon CloudWatch:
-CloudWatch provides monitoring and logging services that allow you to track the performance and health of your application, monitor SES metrics, and set up alarms for critical events.
-Amazon Route 53 (Domain Name System):
-Route 53 can be used to configure DNS settings and set up custom domain names for your email sending infrastructure.
-Amazon SQS (Simple Queue Service) or Amazon SNS (Simple Notification Service):
-SQS or SNS can be used for managing message queues, handling email delivery retries, and implementing notification mechanisms for email sending status updates.
-
-
-
-
-Conclusion:
-The project aimed to develop a robust bulk messaging system using AWS SES to facilitate efficient communication with a large audience.Implemented features included email composition, recipient management, delivery tracking, and integration with AWS services for seamless operation
-
+Conclusion
+This project successfully demonstrates the power and flexibility of Jenkins in automating the CI/CD pipeline, leveraging webhooks for seamless integration, and deploying applications on Amazon EC2. The setup enhances productivity, ensures higher code quality, and accelerates the deployment process.
 
