@@ -5,7 +5,7 @@ do ssh for machine access-------------------------------------------------------
 # sudo apt-get update
 # sudo apt install apache2
 # sudo apt cache search openjdk
-# sudo apt-get install openjdk-8-jdk
+# sudo apt-get install openjdk-17-jdk
 # java --version
 
 Add Jenkins Repository------------------------------
@@ -29,11 +29,6 @@ Ensure that your firewall allows traffic on the Jenkins port (8080):------------
 
 for check jenkins status--------------------------
 # sudo service jenkins status
-
-
-
-
-
 
 # sudo systemctl start jenkins
 # sudo systemctl enable jenkins
